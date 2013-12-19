@@ -13,18 +13,18 @@ import org.junit.Test;
 public class PatternConverterTest {
 
     BufferedImage patternRawImage;
-    Gauge maschenProbe;
+    Gauge gauge;
 
     @Before
     public void setUp() throws Exception {
         patternRawImage = ImageIO.read(PatternConverterTest.class
             .getResource("/ch/knittery/pattern/testPattern.png"));
-        maschenProbe = new Gauge(0, 0, 0, 0);
+        gauge = new Gauge(0, 0, 0, 0);
     }
 
     @Test
     public void testConvertToSchnittmuster() throws IOException {
-        BufferedImage bufferedImage = PatternConverter.convertToPattern(patternRawImage, maschenProbe);
+        BufferedImage bufferedImage = PatternConverter.convertToPattern(patternRawImage, gauge);
         ImageIO.write(bufferedImage, "png", new File("target/ch/patternResult.png"));
     }
 }
