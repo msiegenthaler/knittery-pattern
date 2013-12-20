@@ -7,28 +7,20 @@ public class Gauge {
     private int countRows;
     private int countStitches;
 
-    public Gauge(double width, double height, int countRows, int countMaschen) {
+    public Gauge(double widthInCm, int countStitches, double heightInCm, int countRows) {
         super();
-        this.width = width;
-        this.height = height;
+        this.width = widthInCm;
+        this.height = heightInCm;
         this.countRows = countRows;
-        this.countStitches = countMaschen;
+        this.countStitches = countStitches;
     }
 
-    public double getWidth() {
-        return width;
+    public double getStitchesPerCm() {
+        return countStitches / width;
     }
 
-    public double getHeight() {
-        return height;
-    }
-
-    public int getCountRows() {
-        return countRows;
-    }
-
-    public int getCountStitches() {
-        return countStitches;
+    public double getRowsPerCm() {
+        return countRows / height;
     }
 
 }
