@@ -31,7 +31,7 @@ public class PatternConverter {
         BufferedImage bufferedImage = new BufferedImage(countStitches, countRows,
             BufferedImage.TYPE_INT_RGB);
 
-        bufferedImage.getGraphics().drawImage(scaledImg, 0, 0, Color.RED, null);
+        bufferedImage.getGraphics().drawImage(scaledImg, 0, 0, Color.WHITE, null);
 
         return bufferedImage;
     }
